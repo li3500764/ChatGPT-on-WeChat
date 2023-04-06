@@ -7,7 +7,7 @@ import { IConfig } from "./interface";
 let configFile: any = {};
 
 // get configurations from 'config.yaml' first
-if (fs.existsSync("./config.yaml")) {
+if (fs.existsSync("../config.yaml")) {
   const file = fs.readFileSync("../config.yaml", "utf8");
   configFile = parse(file);
 }

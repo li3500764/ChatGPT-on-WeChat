@@ -16,8 +16,8 @@ if (fs.existsSync("./config.yaml")) {
 else {
   console.log("金莱尔env")
   configFile = {
-    openaiApiKey: process.env.OPENAI_API_KEY,
-    openaiOrganizationID: process.env.OPENAI_ORGANIZATION_KEY,
+    openaiApiKey: "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",
+    openaiOrganizationID: "org-97dUCa3FJHsgKGsbpFeYxHkW",
     chatgptTriggerKeyword: process.env.CHATGPT_TRIGGER_KEYWORD,
   };
 }

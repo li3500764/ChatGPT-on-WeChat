@@ -16,8 +16,8 @@ if (fs.existsSync("./config.yaml")) {
 else {
   console.log("金莱尔env")
   configFile = {
-    openaiApiKey: "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",
-    openaiOrganizationID: "org-97dUCa3FJHsgKGsbpFeYxHkW",
+    openaiApiKey: process.env.OPENAI_API_KEY,
+    openaiOrganizationID: process.env.OPENAI_ORGANIZATION_KEY,
     chatgptTriggerKeyword: process.env.CHATGPT_TRIGGER_KEYWORD,
   };
 }
@@ -30,7 +30,7 @@ if (configFile.openaiApiKey === undefined) {
 }
 
 export const Config: IConfig = {
-  openaiApiKey: "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",
-  openaiOrganizationID: "org-97dUCa3FJHsgKGsbpFeYxHkW" || "",
+  openaiApiKey: process.env.OPENAI_API_KEY as any,
+  openaiOrganizationID: process.env.OPENAI_ORGANIZATION_KEY || "",
   chatgptTriggerKeyword: configFile.chatgptTriggerKeyword || "",
 };

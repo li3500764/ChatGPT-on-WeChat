@@ -19,7 +19,7 @@ else {
     chatgptTriggerKeyword: process.env.CHATGPT_TRIGGER_KEYWORD,
   };
 }
-
+console.log("configFile.openaiApiKey",configFile.openaiApiKey)
 // warning if no OpenAI API key found
 if (configFile.openaiApiKey === undefined) {
   console.error(

@@ -8,11 +8,13 @@ let configFile: any = {};
 
 // get configurations from 'config.yaml' first
 if (fs.existsSync("../config.yaml")) {
+  console.log("金莱尔yaml")
   const file = fs.readFileSync("../config.yaml", "utf8");
   configFile = parse(file);
 }
 // if 'config.yaml' not exist, read them from env
 else {
+  console.log("金莱尔env")
   configFile = {
     openaiApiKey: process.env.OPENAI_API_KEY,
     openaiOrganizationID: process.env.OPENAI_ORGANIZATION_KEY,

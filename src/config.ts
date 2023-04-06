@@ -8,7 +8,7 @@ let configFile: any = {};
 
 // get configurations from 'config.yaml' first
 if (fs.existsSync("./config.yaml")) {
-  const file = fs.readFileSync("./config.yaml", "utf8");
+  const file = fs.readFileSync("../config.yaml", "utf8");
   configFile = parse(file);
 }
 // if 'config.yaml' not exist, read them from env

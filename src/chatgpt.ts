@@ -78,6 +78,7 @@ export class ChatGPTBot {
         organization: Config.openaiOrganizationID,
         apiKey: Config.openaiApiKey,
       });
+      console.log(this.openaiAccountConfig)
       // OpenAI API instance
       this.openaiApiInstance = new OpenAIApi(this.openaiAccountConfig);
       // Hint user the trigger keyword in private chat and group chat
